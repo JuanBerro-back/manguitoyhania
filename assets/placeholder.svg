@@ -1,0 +1,22 @@
+<svg width="500" height="500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="rainbowBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff6fa0"/>
+      <stop offset="20%" stop-color="#ff9f40"/>
+      <stop offset="40%" stop-color="#ffd93d"/>
+      <stop offset="60%" stop-color="#5fae6b"/>
+      <stop offset="80%" stop-color="#4fc3e8"/>
+      <stop offset="100%" stop-color="#8b5fbf"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="#fff8ec"/>
+  <rect x="10" y="10" width="480" height="480" fill="none" stroke="url(#rainbowBorder)" stroke-width="10" rx="18"/>
+  <g transform="translate(250,210)" fill="#ffd9ec" opacity="0.9">
+    <ellipse cx="0" cy="-32" rx="20" ry="32"/>
+    <ellipse cx="0" cy="32" rx="20" ry="32"/>
+    <ellipse cx="-32" cy="0" rx="32" ry="20"/>
+    <ellipse cx="32" cy="0" rx="32" ry="20"/>
+    <circle cx="0" cy="0" r="18" fill="#ffd93d"/>
+  </g>
+  <text x="50%" y="320" font-family="Arial, sans-serif" font-size="24" fill="#8b5fbf" text-anchor="middle">Tu foto aquí 🐾</text>
+</svg>

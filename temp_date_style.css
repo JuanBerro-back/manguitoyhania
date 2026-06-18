@@ -1,0 +1,13 @@
+/* Date Counter Animation */
+.date-counter-anim {
+    font-family: 'Courier New', monospace;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary);
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(255, 77, 128, 0.5);
+    letter-spacing: 2px;
+    opacity: 0;
+    /* Hidden initially, shown by JS */
+    transform: translateY(20px);
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>...</title> <!-- Title set by config.js -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Quicksand:wght@400;500;600;700&family=Permanent+Marker&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+
+  <!-- LOADING SCREEN -->
+  <div id="loader-overlay">
+    <div class="loader-content">
+      <button class="loader-btn">
+        <svg class="infinite-svg" viewBox="0 0 100 50">
+          <path class="infinite-path"
+            d="M20,25 C20,10 40,10 50,25 C60,40 80,40 80,25 C80,10 60,10 50,25 C40,40 20,40 20,25 z" />
+        </svg>
+      </button>
+
+      <div class="arrow-up">↑</div>
+      <!-- Configurable Hints -->
+      <p class="click-hint" id="loading-hint"></p>
+      <p class="loader-message" id="loading-msg"></p>
+    </div>
+  </div>
+
+  <div id="canvas-container"></div>
+
+  <!-- Configurable Music -->
+  <audio id="bg-music" loop muted>
+    <!-- Source set by JS -->
+  </audio>
+
+  <button id="music-toggle" class="music-btn">
+    <span class="music-icon">🎵</span>
+  </button>
+
+  <section id="intro">
+    <svg class="deco-flower c-pink spin" viewBox="0 0 100 100" fill="currentColor" aria-hidden="true">
+      <g>
+        <ellipse cx="50" cy="28" rx="14" ry="22"/>
+        <ellipse cx="50" cy="72" rx="14" ry="22"/>
+        <ellipse cx="28" cy="50" rx="22" ry="14"/>
+        <ellipse cx="72" cy="50" rx="22" ry="14"/>
+      </g>
+      <circle cx="50" cy="50" r="13" fill="#ffd93d"/>
+    </svg>
+    <svg class="deco-flower c-sky small spin" viewBox="0 0 100 100" fill="currentColor" aria-hidden="true">
+      <g>
+        <ellipse cx="50" cy="28" rx="14" ry="22"/>
+        <ellipse cx="50" cy="72" rx="14" ry="22"/>
+        <ellipse cx="28" cy="50" rx="22" ry="14"/>
+        <ellipse cx="72" cy="50" rx="22" ry="14"/>
+      </g>
+      <circle cx="50" cy="50" r="13" fill="#ff6fa0"/>
+    </svg>
+    <svg class="deco-flower c-mango big spin" viewBox="0 0 100 100" fill="currentColor" aria-hidden="true">
+      <g>
+        <ellipse cx="50" cy="28" rx="14" ry="22"/>
+        <ellipse cx="50" cy="72" rx="14" ry="22"/>
+        <ellipse cx="28" cy="50" rx="22" ry="14"/>
+        <ellipse cx="72" cy="50" rx="22" ry="14"/>
+      </g>
+      <circle cx="50" cy="50" r="13" fill="#8b5fbf"/>
+    </svg>
+
+    <h1 id="hero-title"></h1>
+
+    <div class="pet-crest-row" id="pet-crest-row">
+      <!-- Generado por script.js a partir de config.pets -->
+    </div>
+    <div id="hero-date-counter" class="date-counter-anim"></div>
+    <div id="final-reveal">
+      <div class="final-text" id="hero-final-text"></div>
+      <div class="heart-wrapper">
+        <div class="burning-heart">🌸</div>
+      </div>
+      <div class="scroll-indicator">
+        <span id="scroll-text"></span>
+        <div class="arrow-down"></div>
+      </div>
+    </div>
+
+    <button class="btn-primary" onclick="scrollToSection('timeline')">
+      <span>Empezar el viaje</span>
+    </button>
+  </section>
+
+  <section id="timeline">
+    <div class="timeline" id="timeline-container">
+      <!-- Events injected via JS -->
+    </div>
+  </section>
+
+  <section id="gallery">
+    <svg class="deco-flower c-leaf small spin" viewBox="0 0 100 100" fill="currentColor" aria-hidden="true" style="top:6%; left:6%;">
+      <g>
+        <ellipse cx="50" cy="28" rx="14" ry="22"/>
+        <ellipse cx="50" cy="72" rx="14" ry="22"/>
+        <ellipse cx="28" cy="50" rx="22" ry="14"/>
+        <ellipse cx="72" cy="50" rx="22" ry="14"/>
+      </g>
+      <circle cx="50" cy="50" r="13" fill="#ff9f40"/>
+    </svg>
+    <h1 id="gallery-title"></h1>
+    <div class="gallery" id="gallery-container">
+      <!-- Photos injected via JS -->
+    </div>
+  </section>
+
+  <section>
+    <h1 id="final-message">
+      <!-- Content injected via JS -->
+    </h1>
+    <div class="heart-wrapper">
+      <div class="burning-heart">🌸</div>
+    </div>
+    <br>
+  </section>
+
+  <!-- Load Config FIRST -->
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
